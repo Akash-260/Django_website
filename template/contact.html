@@ -1,0 +1,44 @@
+{% extends 'welcome.html '%}
+{%block title%} 
+CONTACT
+{%endblock title%}
+{%block body%}
+<div container> 
+<div class="row">
+ <div class="col-md-12 my-4" style="height:200px" ><center><img src="/static/img/8.jpg" style="height: 200px; width:80%"></center></div>
+
+
+
+
+</div>
+<div class="container">
+  
+        
+          <form method="post" action="/contact">
+            {% csrf_token %}
+
+    <div class="form-group">
+
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name ">
+    </div>
+    <div class="form-group">
+        <label for="email">Enter your email</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="4564646@gmail.com ">
+      </div>
+    <div class="form-group">
+      <label for="phone">phone number</label>
+      <input type="phone" class="form-control" id="phone" name="phone" placeholder="enter your number">
+    
+      
+    </div>
+    
+    <div class="form-group">
+      <label for="desc">Tell us the problem why you want to contact us</label>
+      <textarea class="form-control" id="desc" name="desc" rows="3"></textarea>
+    </div>
+    <center>
+    <button class="btn-btn-primary" type="submit"> Submit</button>
+    </center> 
+</form>
+{%endblock body%}
